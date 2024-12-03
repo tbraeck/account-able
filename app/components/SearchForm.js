@@ -11,14 +11,17 @@ const SearchForm = ({ setPoliticians }) => {
   };
 
   return (
-    <div>
+    <div className="bg-gray-500 p-6 border rounded-md">
       <input
         type="text"
         placeholder="Enter Zip Code"
         value={zipCode}
         onChange={(e) => setZipCode(e.target.value)}
+        className="p-1"
       />
-      <button onClick={handleSearch}>Search</button>
+      <div className="flex items-center justify-center">
+        <button onClick={handleSearch} className="bg-violet-400 border rounded-md p-1 mt-4 text-white">Search</button>
+      </div>
     </div>
   );
 };

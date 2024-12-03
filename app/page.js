@@ -18,8 +18,8 @@ const Home = () => {
   };
 
   return (
-    <div className='flex flex-col'>
-      <div className="mb-16">
+    <div className='flex flex-col justify-center '>
+      <div className="mb-16 pb-3">
         <Header/>
       </div>
    <div className="flex ">

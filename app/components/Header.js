@@ -6,7 +6,7 @@ const Header = () => {
         <div>
             <Logo/>
         </div>
-        <div>
+        <div className='pb-4'>
           <h1>Welcome to Account-Able.</h1>
         </div>
     </div>
