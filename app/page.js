@@ -18,7 +18,7 @@ const Home = () => {
   };
 
   return (
-    <div className='absolute left-0 flex justify-between items-center'>
+    <div className=''>
     <Header/>
    <div>
       <SearchForm setPoliticians={setPoliticians} />
