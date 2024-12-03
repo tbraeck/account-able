@@ -5,12 +5,13 @@ const LetterEditor = ({ onSend }) => {
   const [content, setContent] = useState("");
 
   return (
-    <div className="m-2 flex flex-col justify-center items-center">
+    <div className=" flex flex-col justify-center items-center ">
       <div className="border rounded-md">
         <textarea
           rows={10}
           value={content}
           onChange={(e) => setContent(e.target.value)}
+          className="h-48"
         />
       </div>
       <div >
