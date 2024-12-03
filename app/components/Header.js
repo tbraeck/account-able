@@ -1,7 +1,7 @@
 import Logo from './Logo'
 const Header = () => {
   return (
-    <div className=' h-46 w-full flex justify-center items-center flex-col'>
+    <div className='bg-white h-46 w-full flex justify-center items-center flex-col'>
         {/* absolute left-0  */}
         <div>
             <Logo/>

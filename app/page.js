@@ -19,7 +19,9 @@ const Home = () => {
 
   return (
     <div className='flex flex-col'>
-    <Header/>
+      <div className="mb-16">
+        <Header/>
+      </div>
    <div className="flex ">
     <div className="mx-10">
       <SearchForm setPoliticians={setPoliticians} />
