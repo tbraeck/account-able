@@ -17,7 +17,7 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div className="w-80">
       <SearchForm setPoliticians={setPoliticians} />
       {politicians.length > 0 && (
         <ul>
