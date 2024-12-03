@@ -1,12 +1,14 @@
 import Logo from './Logo'
 const Header = () => {
   return (
-    <div className='bg-gray-300 h-46 w-full flex justify-between items-center'>
+    <div className=' h-46 w-full flex justify-center items-center flex-col'>
         {/* absolute left-0  */}
         <div>
             <Logo/>
         </div>
-      <h1>Welcome to Account-Able.</h1>
+        <div>
+          <h1>Welcome to Account-Able.</h1>
+        </div>
     </div>
   )
 }

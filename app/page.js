@@ -18,18 +18,22 @@ const Home = () => {
   };
 
   return (
-    <div className=''>
+    <div className='flex flex-col'>
     <Header/>
-   <div>
+   <div className="flex ">
+    <div className="mx-10">
       <SearchForm setPoliticians={setPoliticians} />
-      {politicians.length > 0 && (
-        <ul>
-          {politicians.map((p, index) => (
-            <li key={index}>{p.name}</li>
-          ))}
-        </ul>
-      )}
+        {politicians.length > 0 && (
+          <ul>
+            {politicians.map((p, index) => (
+              <li key={index}>{p.name}</li>
+            ))}
+          </ul>
+        )}
+    </div>
+     <div className="mx-10">
       <LetterEditor onSend={handleSend} />
+     </div>
       </div>
     </div>
   );
