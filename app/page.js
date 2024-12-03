@@ -1,6 +1,7 @@
 // pages/index.js
 "use client"
 import { useState } from "react";
+import Header from "./components/Header";
 import LetterEditor from "./components/LetterEditor";
 import SearchForm from "./components/SearchForm";
 
@@ -17,7 +18,9 @@ const Home = () => {
   };
 
   return (
-    <div className="w-80">
+    <div className='absolute left-0 flex justify-between items-center'>
+    <Header/>
+   <div>
       <SearchForm setPoliticians={setPoliticians} />
       {politicians.length > 0 && (
         <ul>
@@ -27,6 +30,7 @@ const Home = () => {
         </ul>
       )}
       <LetterEditor onSend={handleSend} />
+      </div>
     </div>
   );
 };
