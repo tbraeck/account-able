@@ -1,8 +1,7 @@
 // pages/index.js
-"use client"
 import { useState } from "react";
-import LetterEditor from "./components/LetterEditor";
-import SearchForm from "./components/SearchForm";
+import LetterEditor from "../components/LetterEditor";
+import SearchForm from "../components/SearchForm";
 
 const Home = () => {
   const [politicians, setPoliticians] = useState([]);
