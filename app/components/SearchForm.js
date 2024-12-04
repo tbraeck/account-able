@@ -20,7 +20,7 @@ const SearchForm = ({ setPoliticians }) => {
         className="p-1 "
       />
       <div className="flex items-center justify-center">
-        <button onClick={handleSearch} className="bg-violet-400 border rounded-md p-1 mt-4 text-white">Search</button>
+        <button onClick={handleSearch} className="bg-violet-400 border rounded-md p-1 px-2 mt-4 text-white">Search</button>
       </div>
     </div>
   );
