@@ -19,11 +19,12 @@ const Home = () => {
 
   return (
     <div className='flex flex-col justify-center items-center '>
-      <div className="mb-16 pb-3 bg-white h-46 w-full">
+      <div className="mb-8 pb-3 bg-white h-46 w-full">
         <Header/>
       </div>
    <div className="flex ">
     <div className="mx-10">
+    <h1 className="flex justify-center m-2">Search Politicians Here</h1>
       <SearchForm setPoliticians={setPoliticians} />
         {politicians.length > 0 && (
           <ul>

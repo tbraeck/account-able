@@ -4,11 +4,11 @@ const Header = () => {
     <div className='bg-white h-46 w-full flex justify-center items-center flex-col'>
         {/* absolute left-0  */}
         <div>
-            <Logo/>
+            <Logo src="/account.gif" alt='' width={300} height={300} unoptimized/>
         </div>
-        <div className='pb-4'>
-          <h1>Welcome to Account-Able.</h1>
-        </div>
+        {/* <div className='pb-4'> */}
+          {/* <Image src="/welcome.png" alt='' width={200} height={50} /> */}
+        {/* </div> */}
     </div>
   )
 }
