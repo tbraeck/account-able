@@ -5,7 +5,7 @@ const LetterEditor = ({ onSend }) => {
   const [content, setContent] = useState("");
 
   return (
-    <div className=" flex flex-col justify-center items-center border rounded-md border-4 border-gray-400 bg-gray-400">
+    <div className=" mt-5 flex flex-col justify-center items-center border rounded-md border-4 border-gray-400 bg-gray-400">
       <div className="  ">
           <textarea
           rows={10} // Controls the height by rows

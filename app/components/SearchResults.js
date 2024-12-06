@@ -1,7 +1,7 @@
 
 const SearchResults = ({ politicians }) => {
   return (
-    <div className="p-4">
+    <div className="p-4 mt-5 border rounded-md border-4 border-gray-400 bg-white h-60">
       {politicians && politicians.length > 0 ? (
         <div>
           <h2 className="text-xl font-bold mb-4">Search Results</h2>
