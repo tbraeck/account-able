@@ -1,6 +1,6 @@
 // components/LetterEditor.js  
 import { useState } from "react";
-import templates from '../data.json';
+import templates from '../data/templates.json';
   
 const LetterEditor = ({ onSend }) => {  
   const [content, setContent] = useState("");  
