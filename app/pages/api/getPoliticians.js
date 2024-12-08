@@ -12,7 +12,7 @@ const Search = () => {
   const handleSearch = async (event) => {  
    event.preventDefault();  
    try {  
-    const response = await axios.get(`/api/getPoliticians?zipCode=${zipCode}`);  
+    const response = await axios.get(`https://www.googleapis.com/civicinfo/v2/representatives?key=${process.env.GOOGLE_CIVIC_API_KEY}&address=${zipCode}`);  
     setSearchResults(response.data.officials);  
    } catch (error) {  
     console.error(error);  
@@ -52,3 +52,4 @@ const Search = () => {
 };  
   
 export default Search;
+
