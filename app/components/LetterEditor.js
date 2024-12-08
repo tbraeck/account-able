@@ -1,16 +1,21 @@
 // components/LetterEditor.js  
 import { useState } from "react";
-import templates from '../data/templates.json';
+import templateData from '../data/templates.json';
   
 const LetterEditor = ({ onSend }) => {  
   const [content, setContent] = useState("");  
   const [selectedTemplate, setSelectedTemplate] = useState(null);  
+  const templates = templateData.templates;  
+  
+  console.log(templates, "templates")  
   
   const handleTemplateChange = (event) => {  
    const selectedTemplateId = event.target.value;  
    const template = templates.find((template) => template.id === parseInt(selectedTemplateId));  
    setSelectedTemplate(template);  
-   setContent(template.body);  
+   if (content === "") {  
+    setContent(template.body);  
+   }  
   };  
   
   const handleContentChange = (event) => {  
@@ -29,6 +34,7 @@ const LetterEditor = ({ onSend }) => {
           name="template"  
           value={template.id}  
           onChange={handleTemplateChange}  
+          checked={selectedTemplate && selectedTemplate.id === template.id}  
         />  
         <label htmlFor={template.id}>{template.name}</label>  
        </div>  
