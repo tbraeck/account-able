@@ -5,7 +5,7 @@ import templateData from '../data/templates.json';
 const LetterEditor = ({ onSend }) => {  
   const [content, setContent] = useState("");  
   const [selectedTemplate, setSelectedTemplate] = useState(null);  
-  const templates = templateData.templates;  
+  const templates = templateData.templates; // Access the templates property of the imported object  
   
   console.log(templates, "templates")  
   
@@ -13,9 +13,7 @@ const LetterEditor = ({ onSend }) => {
    const selectedTemplateId = event.target.value;  
    const template = templates.find((template) => template.id === parseInt(selectedTemplateId));  
    setSelectedTemplate(template);  
-   if (content === "") {  
-    setContent(template.body);  
-   }  
+   setContent(template.body);  
   };  
   
   const handleContentChange = (event) => {  
@@ -34,7 +32,6 @@ const LetterEditor = ({ onSend }) => {
           name="template"  
           value={template.id}  
           onChange={handleTemplateChange}  
-          checked={selectedTemplate && selectedTemplate.id === template.id}  
         />  
         <label htmlFor={template.id}>{template.name}</label>  
        </div>  
