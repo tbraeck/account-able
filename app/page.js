@@ -24,7 +24,7 @@ const Home = () => {
       </div>
    <div className="flex ">
     <div className="mx-10">
-    <h1 className="flex justify-center m-0">Search For Politicians Here</h1>
+    <h1 className="flex justify-center m-0 mb-3">Search For Politicians Here</h1>
       <SearchForm setPoliticians={setPoliticians} />
         {politicians.length > 0 && (
           <ul>
