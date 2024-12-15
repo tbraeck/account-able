@@ -34,8 +34,8 @@ const Home = () => {
           </ul>
         )}
     </div>
-    <div>
-      <SearchResults/>
+    <div className="mt-6">
+      <SearchResults />
     </div>
      <div className="mx-10">
       <LetterEditor onSend={handleSend} />

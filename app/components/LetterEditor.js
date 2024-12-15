@@ -21,7 +21,7 @@ const LetterEditor = ({ onSend }) => {
   };  
   
   return (  
-   <div className=" mt-5 flex flex-col justify-center items-center border rounded-md border-4 border-gray-400 bg-gray-400">  
+   <div className=" drop-shadow-2xl mt-9 flex flex-col justify-center items-center border rounded-md border-4 border-gray-400 bg-gray-400">  
     <div className="mb-4">  
       <h2>Choose a template:</h2>  
       {templates.map((template) => (  

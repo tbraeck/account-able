@@ -13,7 +13,7 @@ const SearchForm = ({ setPoliticians }) => {
   };
 
   return (
-    <div className="bg-gray-500 p-6 border rounded-md justify-center items-center">
+    <div className="drop-shadow-2xl  bg-gray-500 p-6 border rounded-md justify-center items-center">
       
       <div className="m-2">
         <input
