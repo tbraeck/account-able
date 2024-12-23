@@ -1,4 +1,7 @@
 import axios from "axios";
+import dotenv from "dotenv";
+  
+dotenv.config();  
   
 /**  
  * Retrieves a list of politicians representing the given zip code area.  
@@ -15,7 +18,13 @@ export default async function handler(req, res) {
   }  
   
   try {  
-   const response = await axios.get(`https://www.googleapis.com/civicinfo/v2/representatives/lookupByAddress?key=${process.env.GOOGLE_CIVIC_API_KEY}&address=${zipCode}`);  
+   const apiKey = process.env.GOOGLE_CIVIC_API_KEY;  
+   if (!apiKey) {  
+    console.error("Error: GOOGLE_CIVIC_API_KEY is not defined in .env file");  
+    return res.status(500).json({ error: "Internal Server Error" });  
+   }  
+  
+   const response = await axios.get(`https://www.googleapis.com/civicinfo/v2/representatives?key=${apiKey}&address=${zipCode}`);  
   
    if (response.data.error) {  
     console.error("API Error:", response.data.error);  
